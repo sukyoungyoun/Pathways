@@ -1,0 +1,263 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+    color: black;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll issues */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+}
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Aligns nav to the right */
+    align-items: center;
+    padding: 30px 30px;
+    background-color: #ffffff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    top: 20px; 
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #4A63D8;
+    font-weight: 600;
+    position: absolute;
+    left: 30px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A63D8;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFE19F;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6B84FF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: #4A63D8;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-family: 'Jost', sans-serif;
+    color: #ffb855;
+}
+
+.about h2{
+font-family: 'Jost', sans-serif;
+    color: #4A63D8;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Capabilities Section */
+.features {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 4.5rem;
+    text-align: left;
+    margin: 20px 0;
+    color: #4A63D8;
+}
+
+/* Features Section */
+
+
+.features {
+    padding: 40px 15px; /* Reduced horizontal padding for better space usage */
+    text-align: center;
+    width: 100%; /* Ensure container spans full width */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Align items in the center */
+    background-color: #F4F4F4;
+    border: 1px solid #FFE19F;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto; /* Reduced margin to reduce white space */
+    max-width: 960px; /* Adjusted max-width for better use of space */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto; /* Allow flexibility for content height */
+}
+
+.feature h2 {
+    font-size: 1.8rem; /* Slightly smaller for better hierarchy */
+    margin-bottom: 8px; /* Reduced space under the heading */
+    color: #333; /* Slightly darker color for readability */
+}
+
+.feature-bottom {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; /* Full width to use space better */
+    gap: 12px; /* Increased gap for visual separation */
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    margin: 0;
+    max-width: 80%; /* Increased max-width for better text flow */
+    line-height: 1.5; /* Improved readability */
+}
+
+.feature-video {
+    max-width: 100%; /* Video will now take up full width */
+    height: auto;
+    max-height: 500px; /* Limit the height to avoid overwhelming the container */
+    border-radius: 8px;
+    margin-top: 15px; /* Added margin for spacing */
+    object-fit: contain; /* Preserve aspect ratio and prevent stretching */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #FFE19F;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative; /* Changed from absolute */
+    bottom: 0;
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+    z-index: 10;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .logo {
+        font-size: 2rem; /* Smaller logo size */
+        left: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjusted font size for hero */
+        padding: 20px;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .hero-content, .hero-image {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .about, .features {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .feature {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem; /* Further reduce font size for very small screens */
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .feature {
+        margin: 10px;
+        padding: 10px;
+    }
+}

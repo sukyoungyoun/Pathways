@@ -1,0 +1,394 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: black;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 30px;
+    background-color: #ffffff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    top: 20px; 
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #4A63D8;
+    font-weight: 600;
+    position: absolute;
+    left: 30px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A63D8;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFE19F;
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px;
+    background-color: #F4F4F4;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #000000;
+    line-height: 1.4;
+    white-space: normal;
+    animation: slideIn 1s ease-out; /* Apply slide-in animation */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #767676;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #FFE19F;
+    color: #4A63D8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ffd06a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:focus {
+    outline: 2px solid #4A63D8;
+    background-color: #ffd06a;
+}
+
+.about-btn {
+    font-family: 'Jost', sans-serif;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    color: #a2b3ff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+    color: #ffd06a;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    animation: featureImageAnimation 1.5s ease-out; /* Apply feature image animation */
+}
+
+/* Hero Text Slide-In Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Start from left */
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully opaque */
+    }
+}
+
+/* Feature Image Zoom-In Animation */
+@keyframes featureImageAnimation {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        transform: scale(1); /* Scale to normal size */
+        opacity: 1; /* Fully opaque */
+    }
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h1, .about h2 {
+    font-family: 'Jost', sans-serif;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Capabilities Section */
+.features {
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* Fade in animation */
+}
+
+h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Feature Video Hover Zoom */
+.feature-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 60px 60px;
+    height: 500px;
+}
+
+.feature-video {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: auto;
+    max-height: 540px;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.feature-video:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app-video {
+    background-color: #000000;
+    padding: 20px;
+}
+
+.video-text {
+    color: #FFE19F;
+    text-align: center;
+}
+
+.video-text h2 {
+    font-size: 3rem;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 25px;
+    color: #FFE19F;
+}
+
+.video-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4A63D8;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #FFE19F;
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+}
+
+/* Mobile Responsiveness - Adjust video section for smaller screens */
+@media (max-width: 768px) {
+    .feature-video {
+        max-height: 400px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-video {
+        max-height: 300px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #6B84FF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    z-index: 10;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+        left: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 0 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        flex-basis: 100%;
+    }
+
+    .hero h1 {
+        margin-top: 25px;
+        font-size: 7vw;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 6vw;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .feature {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
