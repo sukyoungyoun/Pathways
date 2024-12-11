@@ -52,28 +52,6 @@ header {
     color: #FFE19F;
 }
 
-.cta-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #6B84FF;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px);
-    background-color: #4A63D8;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* About Section */
 .about {
     padding: 40px 20px;
@@ -97,6 +75,41 @@ font-family: 'Jost', sans-serif;
     color: #555;
     margin-bottom: 20px;
 }
+.about-container {
+    display: flex;
+    flex-direction: row; /* Side-by-side layout for columns */
+    gap: 70px; /* Space between columns */
+}
+.about-text {
+    flex: 1; /* Make the text column take up equal space */
+    color: #555;
+}
+
+.about-video {
+    flex: 1; /* Make the video column take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+.about-video iframe {
+    width: 100%; /* Makes video adapt to container width */
+    max-width: 100px; /* Set the maximum width to 100px */
+    height: auto; /* Ensures proper aspect ratio */
+    border: none;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px; /* Smaller gap between stacked sections */
+    }
+
+    .about-video iframe {
+        height: 250px;
+    }
+}
 
 /* Capabilities Section */
 .features {
@@ -111,75 +124,6 @@ h1 {
     margin: 20px 0;
     color: #4A63D8;
 }
-
-/* Features Section */
-
-
-.features {
-    padding: 40px 15px; /* Reduced horizontal padding for better space usage */
-    text-align: center;
-    width: 100%; /* Ensure container spans full width */
-    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
-}
-
-.feature {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; /* Align items in the center */
-    background-color: #F4F4F4;
-    border: 1px solid #FFE19F;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto; /* Reduced margin to reduce white space */
-    max-width: 960px; /* Adjusted max-width for better use of space */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: auto; /* Allow flexibility for content height */
-}
-
-.feature h2 {
-    font-size: 1.8rem; /* Slightly smaller for better hierarchy */
-    margin-bottom: 8px; /* Reduced space under the heading */
-    color: #333; /* Slightly darker color for readability */
-}
-
-.feature-bottom {
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%; /* Full width to use space better */
-    gap: 12px; /* Increased gap for visual separation */
-}
-
-.feature p {
-    font-size: 1rem;
-    color: #555;
-    text-align: left;
-    margin: 0;
-    max-width: 80%; /* Increased max-width for better text flow */
-    line-height: 1.5; /* Improved readability */
-}
-
-.feature-video {
-    max-width: 100%; /* Video will now take up full width */
-    height: auto;
-    max-height: 500px; /* Limit the height to avoid overwhelming the container */
-    border-radius: 8px;
-    margin-top: 15px; /* Added margin for spacing */
-    object-fit: contain; /* Preserve aspect ratio and prevent stretching */
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
